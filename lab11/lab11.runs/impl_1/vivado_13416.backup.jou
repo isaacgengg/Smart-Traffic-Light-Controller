@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Dec  1 19:47:40 2023
+# Process ID: 13416
+# Current directory: C:/Users/isaac/ecen248/lab11/lab11.runs/impl_1
+# Command line: vivado.exe -log tlc_controller_verl.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source tlc_controller_verl.tcl -notrace
+# Log file: C:/Users/isaac/ecen248/lab11/lab11.runs/impl_1/tlc_controller_verl.vdi
+# Journal file: C:/Users/isaac/ecen248/lab11/lab11.runs/impl_1\vivado.jou
+# Running On: Isaac_Geng, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16354 MB
+#-----------------------------------------------------------
+source tlc_controller_verl.tcl -notrace
