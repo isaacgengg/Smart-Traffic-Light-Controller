@@ -1,0 +1,338 @@
+
+*** Running vivado
+    with args -log tlc_controller.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tlc_controller.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source tlc_controller.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1280.969 ; gain = 9.148
+Command: synth_design -top tlc_controller -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22880
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1280.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'tlc_controller' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'synchronizer' [C:/Users/isaac/ecen248/lab_11/synchronizer.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'synchronizer' (0#1) [C:/Users/isaac/ecen248/lab_11/synchronizer.v:9]
+INFO: [Synth 8-6157] synthesizing module 'tlc_fsm' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:1]
+WARNING: [Synth 8-6104] Input port 'Count' has an internal driver [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'tlc_fsm' (0#1) [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tlc_controller' (0#1) [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:3]
+WARNING: [Synth 8-3848] Net RstCount in module/entity tlc_fsm does not have driver. [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:3]
+WARNING: [Synth 8-7129] Port JB[3] in module tlc_controller is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1280.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1280.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1280.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1280.969 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/isaac/ecen248/lab_11/tlc_controller.xdc]
+Finished Parsing XDC File [C:/Users/isaac/ecen248/lab_11/tlc_controller.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/isaac/ecen248/lab_11/tlc_controller.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tlc_controller_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/tlc_controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1330.039 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1330.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'tlc_fsm'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextState_reg' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:92]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_nextState_reg' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:92]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      S0 |                              000 |                              000
+                      S1 |                              001 |                              001
+                      S2 |                              010 |                              010
+                      S3 |                              011 |                              011
+                      S4 |                              100 |                              100
+                      S5 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'tlc_fsm'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextState_reg' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:92]
+WARNING: [Synth 8-327] inferring latch for variable 'highwaySignal_reg' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:27]
+WARNING: [Synth 8-327] inferring latch for variable 'farmSignal_reg' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_fsm.v:28]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 2     
+	   6 Input    2 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port JB[3] in module tlc_controller is either unconnected or has no load
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[30] with 1st driver pin 'i_0/out[30]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[30] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[30] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[29] with 1st driver pin 'i_0/out[29]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[29] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[29] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[28] with 1st driver pin 'i_0/out[28]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[28] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[28] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[27] with 1st driver pin 'i_0/out[27]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[27] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[27] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[26] with 1st driver pin 'i_0/out[26]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[26] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[26] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[25] with 1st driver pin 'i_0/out[25]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[25] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[25] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[24] with 1st driver pin 'i_0/out[24]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[24] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[24] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[23] with 1st driver pin 'i_0/out[23]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[23] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[23] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[22] with 1st driver pin 'i_0/out[22]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[22] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[22] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[21] with 1st driver pin 'i_0/out[21]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[21] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[21] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[20] with 1st driver pin 'i_0/out[20]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[20] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[20] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[19] with 1st driver pin 'i_0/out[19]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[19] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[19] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[18] with 1st driver pin 'i_0/out[18]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[18] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[18] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[17] with 1st driver pin 'i_0/out[17]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[17] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[17] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[16] with 1st driver pin 'i_0/out[16]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[16] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[16] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[15] with 1st driver pin 'i_0/out[15]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[15] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[15] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[14] with 1st driver pin 'i_0/out[14]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[14] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[14] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[13] with 1st driver pin 'i_0/out[13]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[13] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[13] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[12] with 1st driver pin 'i_0/out[12]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[12] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[12] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[11] with 1st driver pin 'i_0/out[11]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[11] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[11] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[10] with 1st driver pin 'i_0/out[10]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[10] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[10] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[9] with 1st driver pin 'i_0/out[9]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[9] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[8] with 1st driver pin 'i_0/out[8]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[8] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[7] with 1st driver pin 'i_0/out[7]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[7] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[6] with 1st driver pin 'i_0/out[6]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[6] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[5] with 1st driver pin 'i_0/out[5]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[5] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[4] with 1st driver pin 'i_0/out[4]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[4] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[3] with 1st driver pin 'i_0/out[3]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[3] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[2] with 1st driver pin 'i_0/out[2]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[2] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[1] with 1st driver pin 'i_0/out[1]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[1] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[0] with 1st driver pin 'i_0/out[0]' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[0] with 2nd driver pin 'GND' [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/isaac/ecen248/lab_11/lab_11.srcs/sources_1/new/tlc_controller.v:21]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (FSM/FSM_sequential_state_reg[2]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/FSM_sequential_state_reg[1]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/FSM_sequential_state_reg[0]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/FSM_sequential_nextState_reg[2]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/FSM_sequential_nextState_reg[1]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/FSM_sequential_nextState_reg[0]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/highwaySignal_reg[0]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/farmSignal_reg[0]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/highwaySignal_reg[1]) is unused and will be removed from module tlc_controller.
+WARNING: [Synth 8-3332] Sequential element (FSM/farmSignal_reg[1]) is unused and will be removed from module tlc_controller.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUF  |     7|
+|2     |OBUFT |     1|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 1330.039 ; gain = 49.070
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 93 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 1330.039 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:43 . Memory (MB): peak = 1330.039 ; gain = 49.070
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1330.039 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1330.039 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ae85ee1a
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 20 Warnings, 93 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:50 . Memory (MB): peak = 1330.039 ; gain = 49.070
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/isaac/ecen248/lab_11/lab_11.runs/synth_1/tlc_controller.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file tlc_controller_utilization_synth.rpt -pb tlc_controller_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  1 18:25:33 2023...
